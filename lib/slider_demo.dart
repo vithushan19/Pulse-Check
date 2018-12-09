@@ -4,14 +4,19 @@
 
 import 'dart:math' as math;
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 
 class SliderDemo extends StatefulWidget {
   static const String routeName = '/material/slider';
 
+  final firestore;
+
+  SliderDemo(this.firestore);
+
   @override
-  _SliderDemoState createState() => _SliderDemoState();
+  _SliderDemoState createState() => _SliderDemoState(firestore);
 }
 
 class _SliderDemoState extends State<SliderDemo> {
@@ -19,6 +24,11 @@ class _SliderDemoState extends State<SliderDemo> {
   double _healthValue = 20.0;
   double _workValue = 50.0;
   double _playValue = 80.0;
+
+  final firestore;
+  CollectionReference get pulses => firestore.collection('pulses');
+
+  _SliderDemoState(this.firestore);
 
   @override
   Widget build(BuildContext context) {
@@ -120,6 +130,18 @@ class _SliderDemoState extends State<SliderDemo> {
   }
 
   void _submit() {
+    _savePulse();
     Navigator.pop(context);
+  }
+
+  Future<void> _savePulse() async {
+    await pulses.add(<String, dynamic>{
+      'user': 'vithushan',
+      'created_at': FieldValue.serverTimestamp(),
+      'love': _loveValue,
+      'health': _healthValue,
+      'play': _playValue,
+      'work': _workValue
+    });
   }
 }
