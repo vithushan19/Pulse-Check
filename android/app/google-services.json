@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "600826542746",
+    "firebase_url": "https://pulse-check-d94a9.firebaseio.com",
+    "project_id": "pulse-check-d94a9",
+    "storage_bucket": "pulse-check-d94a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600826542746:android:7a3c5d9fdfd492c9",
+        "android_client_info": {
+          "package_name": "com.vithushan.pulsecheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600826542746-0lupko4c5rp71ekspvgqdgfetvucfsu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsmYnDWYpbDBldi26Wce6t8fz63O6P9tc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

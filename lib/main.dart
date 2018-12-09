@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Pulse Ckheck'),
+      home: MyHomePage(title: 'Pulse Check'),
     );
   }
 }
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             new SizedBox(height: 550.0, child:  Graph.withSampleData()),
           ])),
       floatingActionButton: new FloatingActionButton(
-          child: new Icon(Icons.refresh), onPressed: _handleButtonPress),
+          child: new Icon(Icons.add), onPressed: _handleButtonPress),
     );
   }
 }

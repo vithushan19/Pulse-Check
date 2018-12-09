@@ -53,6 +53,8 @@ class Graph extends StatefulWidget {
 
   /// Create one series with sample hard coded data.
   static List<charts.Series<TimeSeriesData, DateTime>> _createSampleData() {
+
+
     final play_data = [
       new TimeSeriesData(new DateTime(2017, 9, 19), 5),
       new TimeSeriesData(new DateTime(2017, 9, 26), 25),
