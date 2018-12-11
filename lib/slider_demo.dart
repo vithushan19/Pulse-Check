@@ -129,9 +129,10 @@ class _SliderDemoState extends State<SliderDemo> {
     );
   }
 
-  void _submit() {
-    _savePulse();
+  void _submit() async {
+    await _savePulse();
     Navigator.pop(context);
+    return;
   }
 
   Future<void> _savePulse() async {
